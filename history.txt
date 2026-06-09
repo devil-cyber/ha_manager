@@ -1,85 +1,30 @@
-If you're asking about **saving your work in VS Code**, then yes—everything you've created so far is already saved on disk as long as you saved the files.
+Your question is a bit broad. Here are some common commands to check Ubuntu system information:
 
-### Check what files exist
-
-From your project directory:
-
-```bash
-cd ~/project/ha_manager
-find . -type f
-```
-
-You should see files such as:
-
-```text
-manage.py
-ha/models.py
-ha/views.py
-ha/forms.py
-ha/urls.py
-ha/templates/ha/config.html
-ha_manager/settings.py
-ha_manager/urls.py
-db.sqlite3
-```
-
-### In VS Code
-
-To save a file:
-
-```text
-Ctrl + S
-```
-
-To save all open files:
-
-```text
-File → Save All
-```
+Check Ubuntu Version
+lsb_release -a
 
 or
 
-```text
-Ctrl + K, then S
-```
+cat /etc/os-release
 
-### Close and continue later
+or
 
-You can simply close VS Code:
+hostnamectl
+Check Kernel Version
+uname -r
+Check System Architecture
+uname -m
+Check CPU Information
+lscpu
+Check Memory (RAM)
+free -h
+Check Disk Usage
+df -h
+Check Running Ubuntu Release
+cat /etc/issue
 
-```text
-File → Exit
-```
+Example output:
 
-or close the window.
+Ubuntu 20.04.6 LTS \n \l
 
-Later:
-
-```bash
-cd ~/project/ha_manager
-code .
-```
-
-and your project will open exactly as you left it.
-
-### Extra safety: Use Git
-
-I strongly recommend saving a snapshot with Git:
-
-```bash
-cd ~/project/ha_manager
-
-git init
-git add .
-git commit -m "Phase 1 complete - Django HA form working"
-```
-
-Then even if you accidentally edit something, you can restore it later.
-
-When you return, open the project in VS Code and tell me:
-
-```text
-Continue from Phase 1 of my Keepalived Django project
-```
-
-and we'll start with **preventing duplicate HAConfig records**.
+If you need to check something specific (Ubuntu version, services, packages, network, disk, etc.), tell me what you want to verify.
